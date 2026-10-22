@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-
-CVE-2026-109618.py — PHP OOM‑bailout crash triage scanner (CVE‑2026‑109618 class)
+php_oom.py — PHP OOM‑bailout crash triage scanner (CVE‑2026‑109618 class)
 
 Features
 --------
@@ -18,9 +17,9 @@ Features
 
 Usage
 -----
-    python3 audit_php_oom.py https://target/upload.php
-    python3 audit_php_oom.py https://target/upload.php --plugin multipart
-    python3 audit_php_oom.py https://target/index.php --retries 5 --timeout 15 \
+    python3 php_oom.py https://target/upload.php
+    python3 php_oom.py https://target/upload.php --plugin multipart
+    python3 php_oom.py https://target/index.php --retries 5 --timeout 15 \
         --proxy http://127.0.0.1:8080 --log-file audit.log --dry-run
 
 Installation
