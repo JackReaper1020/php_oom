@@ -42,16 +42,16 @@ pip install -r requirements.txt
 
 ```bash
 # Run all plugins against a target
-python3 CVE-2026-109618.py https://target/upload.php
+python3 php_oom.py https://target/upload.php
 
 # Dry-run — generate payloads without sending anything
-python3 CVE-2026-109618.py https://target/upload.php --dry-run
+python3 php_oom.py https://target/upload.php --dry-run
 
 # Single plugin
-python3 CVE-2026-109618.py https://target/upload.php --plugin multipart
+python3 php_oom.py https://target/upload.php --plugin multipart
 
 # With Burp proxy, custom timeout, verbose output
-python3 CVE-2026-109618.py https://target/upload.php \
+python3 php_oom.py https://target/upload.php \
     --proxy http://127.0.0.1:8080 \
     --timeout 20 \
     --retries 5 \
@@ -59,7 +59,7 @@ python3 CVE-2026-109618.py https://target/upload.php \
     --log-file audit.log
 
 # Disable TLS verification (self-signed certs)
-python3 CVE-2026-109618.py https://target/upload.php --no-verify
+python3 php_oom.py https://target/upload.php --no-verify
 ```
 
 ### All flags
@@ -122,32 +122,6 @@ python3 CVE-2026-109618.py https://target/upload.php --no-verify
 
 ---
 
-## Project structure
-
-```
-php2shell/
-├── CVE-2026-109618.py   # Main scanner
-├── requirements.txt
-├── .venv/               # Local virtualenv (gitignored)
-└── README.md
-```
-
----
-
-## .gitignore
-
-Paste this into `.gitignore` before your first commit:
-
-```
-.venv/
-__pycache__/
-*.pyc
-*.log
-.env
-```
-
----
-
 ## Disclaimer
 
 This tool is intended for **authorized security testing and research only**. The author is not responsible for any misuse or damage caused by running this tool against systems without explicit permission. Always operate within the scope of your bug bounty programme or a signed penetration testing agreement.
@@ -156,4 +130,4 @@ This tool is intended for **authorized security testing and research only**. The
 
 ## Author
 
-James Mangrati — bug bounty / security research
+Anuyog James Mangrati — bug bounty / security research
