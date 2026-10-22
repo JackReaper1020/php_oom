@@ -22,8 +22,8 @@ PHP's memory allocator can be forced into a bailout path when a single request t
 ## Installation
 
 ```bash
-git clone https://github.com/youruser/php2shell.git
-cd php2shell
+git clone https://github.com/JackReaper1020/php_oom.git
+cd php_oom
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
